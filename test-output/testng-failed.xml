@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.inetbanking.utilities.Reporting"/>
+    <listener class-name="com.inetbanking.utilities.Transform"/>
+  </listeners>
+  <test thread-count="5" name="Pratise_Selenium(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.inetbanking.testCases.CustomerPages">
+        <methods>
+          <include name="CustDetails"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.inetbanking.testCases.CustomerPages -->
+      <class name="com.inetbanking.testCases.LoginTest_DD">
+        <methods>
+          <include name="setUp"/>
+          <include name="test_Data" invocation-numbers="2 2 2 2 3 3"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.inetbanking.testCases.LoginTest_DD -->
+    </classes>
+  </test> <!-- Pratise_Selenium(failed) -->
+</suite> <!-- Failed suite [Suite] -->
